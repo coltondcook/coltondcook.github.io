@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Darouse Clicker</title>
+  <style>
+  body{
+    background-color: rgb(67, 108, 185);  
+  }
+  </style>
+  </head> 
+<body>
+  <img id="DarouseClicker" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj-SwJpFe6TK5zk5Grm3HwIPtF1Ir8b9NAGw&s">
+  <h1 id="score"> score = o </h1>
+
+</body>
+</html>
+<script> 
+document.getElementById("DarouseClicker").addEventListener("click",up)
+
+  var score = 0
+
+function up(){
+  
+  score= score + 1
+ document.getElementById("score").innerHTML = score
+  console.log(score)
+  
+}
+
+</script> 
