@@ -8,18 +8,50 @@
             width: 30px;
             height: 30px;
             background-color: red;
+            top: 100px;
+            left: 400px;
         }
     </style>
 
 </head>
 
 <body>
-    <div>
+    <div id="box">
 
     </div>
 </body>
 
+
 </html>
+
+
 <script>
-    
+    document.getElementById("box").addEventListener("click", moveBox)
+    var position = 100
+    var up = 100
+    setInterval(moveBox, 16)
+    var diretionSideways = 5
+    var diretionUp = 7
+    function moveBox() {
+        //move box
+        //increase box postion
+        position = position + diretionSideways
+        up = up + diretionUp
+        document.getElementById("box").style.left = position + "px"
+        document.getElementById("box").style.top = up + "px"
+
+        //make it change diretion if the box postion >900
+        if (position > 900) {
+            diretionSideways = -5
+        } if(position <0){
+            diretionSideways = 5
+
+        }
+        if (position > 900) {
+            diretionUp = -7
+        } if(position <0){
+            diretionUp = 7
+
+        }        
+    }
 </script>
